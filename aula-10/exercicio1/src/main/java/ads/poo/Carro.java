@@ -8,9 +8,13 @@ public class Carro {
     private static final int VEL_MIN = 0;
 
     public Carro(String modelo, double velocidadeMax) {
-        this.modelo = modelo;
-        this.velocidadeMax = velocidadeMax;
-        this.velocidadeAtual = 0;
+       this.modelo = modelo;
+       if (velocidadeMax > VEL_MAX_MODELOS) {
+           this.velocidadeMax = VEL_MAX_MODELOS;
+       } else {
+           this.velocidadeMax = velocidadeMax;
+       }
+       this.velocidadeAtual = 0;
     }
 
     public Carro(String modelo) {
