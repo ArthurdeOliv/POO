@@ -4,9 +4,9 @@ public class Conta {
 
     private String titular;
     private String numero;
-    private  double saldo;
+    private double saldo;
 
-    public Conta(String titular, String numero, String saldo) {
+    public Conta(String titular, String numero, double saldo) {
         this.titular = titular;
         this.numero = numero;
         this.saldo = (saldo > 0) ? saldo : 0;
@@ -20,8 +20,9 @@ public class Conta {
         return saldo;
     }
 
-   public void depositar(int valor){
+   public double depositar(double valor){
         this.saldo += (valor > 0) ? valor : 0;
+        return saldo;
    }
 
    public void sacar(double valor){
