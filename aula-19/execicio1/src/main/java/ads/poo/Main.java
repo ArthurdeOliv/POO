@@ -5,13 +5,22 @@ import ads.poo.produtos.SemFio;
 import ads.poo.produtos.Telefone;
 
 public class Main {
-    static void main() {
+    static void main(String[] args) {
 
-    Telefone t = new Telefone(1234, "1324","21321", 100, new Dimensao(7,5,9));
-    SemFio sf = new SemFio(1, "123", "123", 20, new Dimensao(4,2,3), 200, 5, 2000);
+        Telefone t = new Telefone();
+        SemFio sf = new SemFio();
+        Telefone a = new SemFio();
 
-        IO.println(t);
-        IO.println(sf);
+        Telefone[] vetor = new Telefone[3];
 
+        vetor[0] = new Telefone();
+        vetor[1] = new SemFio();
+        vetor[2] = new SemFio();
+
+        for(Telefone aux : vetor){
+            if (aux instanceof SemFio novo){
+                IO.println(novo.getFrequencia());
+            }
+        }
     }
 }

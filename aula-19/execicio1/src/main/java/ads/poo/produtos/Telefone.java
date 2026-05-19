@@ -16,7 +16,17 @@ public class Telefone {
         this.dim = dim;
     }
 
-    @Override
+    public Telefone() {
+
+    }
+
+    public String getModelo() {
+    return modelo;
+    }
+
+
+
+@Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("Telefone{");
         sb.append("codigo=").append(codigo);

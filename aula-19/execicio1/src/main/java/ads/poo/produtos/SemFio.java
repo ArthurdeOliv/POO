@@ -13,7 +13,14 @@ public class SemFio extends Telefone {
         this.distancia = distancia;
     }
 
-    @Override
+    public SemFio() {
+
+    }
+
+    public double getFrequencia() {
+    return frequencia;
+
+}@Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("SemFio{");
         sb.append(super.toString());
