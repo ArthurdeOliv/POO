@@ -28,8 +28,12 @@ public class CartaGrafica {
         d.show();
     }
 
-    public void clicouDentro(Draw d){
-
+    public boolean clicouDentro(double x, double y){
+        if ((x <= this.x + 36 && x >= this.x - 36) && (y <= this.y + 48 && y >= this.y - 48)){
+            virada = !virada;
+            return true;
+        }
+            return false;
     }
 
 }
